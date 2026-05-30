@@ -1,0 +1,149 @@
+:root {
+  --bg: #f4f1ec;
+  --text: #2f3433;
+  --body: #4f5653;
+  --muted: #6f7673;
+  --border: #d8d2c8;
+  --accent: #5f6f64;
+  --accent-hover: #4e5d53;
+  --button-text: #f8f6f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+main {
+  width: min(100% - 48px, 680px);
+  margin: 0 auto;
+  padding: 72px 0;
+}
+
+section {
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+}
+
+.hero {
+  padding: 24px 0 56px;
+}
+
+.eyebrow {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 10ch;
+  margin-bottom: 24px;
+  color: var(--text);
+  font-size: clamp(2.8rem, 12vw, 5.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.075em;
+}
+
+h2 {
+  margin-bottom: 18px;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+p,
+li {
+  color: var(--body);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.lead {
+  max-width: 570px;
+  color: var(--text);
+  font-size: clamp(1.2rem, 3vw, 1.55rem);
+  line-height: 1.45;
+}
+
+ul {
+  padding-left: 1.1rem;
+}
+
+li + li {
+  margin-top: 0.65rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--button-text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.button:focus-visible {
+  outline: 3px solid rgba(95, 111, 100, 0.25);
+  outline-offset: 3px;
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+.button.secondary:hover,
+.button.secondary:focus-visible {
+  background: var(--accent);
+  color: var(--button-text);
+}
+
+.price {
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (max-width: 520px) {
+  main {
+    width: min(100% - 32px, 680px);
+    padding: 48px 0;
+  }
+
+  .hero {
+    padding-top: 12px;
+  }
+}
